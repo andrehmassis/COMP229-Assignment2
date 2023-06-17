@@ -1,0 +1,119 @@
+body{
+    background-color: rgb(251, 245, 238);
+}
+.container {
+    margin-top: 1rem;
+}
+/* About Button in Home Page*/
+.aboutmehomepage {
+    text-align: center;
+    width: 180px;
+    padding-top: 12rem;
+}
+.button {
+    background-color: hsl(0, 0%, 64%);
+    border: none;
+    color: #000000;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family:cursive;
+    font-size: 14px;
+  }
+  
+  .button1 {
+    border-radius: 6px;
+    margin-top: 2rem;
+}
+
+/* Columns in About, Home and Projects pages*/
+.aboutcolumn1 {
+    float: left;
+    width: 180px; 
+    height: 250px;
+  }
+.aboutcolumn2 {
+    float: left;
+    width: 50%;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.home-column1 {
+  float: left;
+  width: 180px; 
+  height: 250px;
+}
+.home-column2 {
+  float: left;
+  width: 50%;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.projectscolumn1 {
+    float: left;
+    width: 33%;
+    height: 100%;
+    border-right: solid black;
+    text-align: center;
+    padding: 15px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+.projectscolumn2 {
+    float: left;
+    width: 33%;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.projectscolumn3 {
+    float: left;
+    width: 33%;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    border-left: solid black;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+  /*  Columns in About, Home and Projects pages  - Clear floats after the columns */
+  .aboutrowrow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.projectsrow{
+    border: #000000 solid;
+    height:auto;
+    margin-top: 2rem;
+}
+  .projectsrow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /*Form*/
+
+  .form-buttons{
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  .formbutton{
+    background-color: hsl(0, 0%, 64%);
+    border: solid 1px;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    border-radius: 6px;
+  }
