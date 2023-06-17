@@ -1,5 +1,5 @@
 {
-  "name": "assignment1",
+  "name": "assignment2",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -17,16 +17,16 @@
     "morgan": "~1.9.1",
     "popper.js": "^1.16.1"
   },
-  "description": "Assignment1",
+  "description": "Assignment2",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andrehmassis/COMP229-Assignment1.git"
+    "url": "git+https://github.com/andrehmassis/COMP229-assignment2.git"
   },
   "author": "Andre Assis",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/andrehmassis/COMP229-Assignment1/issues"
+    "url": "https://github.com/andrehmassis/COMP229-assignment2/issues"
   },
-  "homepage": "https://github.com/andrehmassis/COMP229-Assignment1#readme"
+  "homepage": "https://github.com/andrehmassis/COMP229-assignment2#readme"
 }
