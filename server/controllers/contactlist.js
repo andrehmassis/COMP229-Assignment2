@@ -1,3 +1,10 @@
+/* 
+Student Name: Andre Henrique Moyses de Assis
+Student number: 301282773
+File: contactlist.js
+Date: 2023-06-17
+*/
+
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
@@ -10,14 +17,19 @@ module.exports.displayContactList = async (req, res, next) =>{
         let contactList = await ContactList.find();
         console.log(contactList)
         
-        res.render('businessContact/contactlist', {title: 'Business Contact List', ContactList : contactList})
+        res.render('businessContact/contactlist', {
+            title: 'Business Contact List', 
+            ContactList : contactList,
+            displayName: req.user ? req.user.displayName : ''});
     } catch (err) {
         console.error(err);
     }
 };
 module.exports.displayAddPage = async (req, res, next) =>{
     try {
-        res.render('businessContact/add', {title: 'Add Games'})
+        res.render('businessContact/add', {
+            title: 'Add Games',
+            displayName: req.user ? req.user.displayName : ''});
     } catch (err) {
         console.error(err);
     }
@@ -43,7 +55,10 @@ module.exports.displayEditPage = async (req, res, next) =>{
 
     try{
         let contactListToEdit = await ContactList.findById(id);
-        res.render('businessContact/edit', {title: 'Update Contact', contactList : contactListToEdit});
+        res.render('businessContact/edit', {
+            title: 'Update Contact', 
+            contactList : contactListToEdit,
+            displayName: req.user ? req.user.displayName : ''});
     } catch (err){
         console.log(err);
         res.status(500).send(err);
@@ -65,7 +80,7 @@ module.exports.processEditPage = async (req, res, next) =>{
         res.status(500).send(err);
     }
 }
-module.exports.performDeletion = async (req, res, next) =>{
+module.exports.performDelete = async (req, res, next) =>{
     let id = req.params.id;
 
     try{
