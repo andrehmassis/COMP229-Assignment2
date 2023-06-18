@@ -1,34 +1,25 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET Home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Home' });
-});
+let indexController = require('../controllers/index')
 
-/* GET Home page. */
-router.get('/home', function(req, res, next) {
-  res.render('index', { title: 'Home' });
-});
+/* GET home page. */
+router.get('/', indexController.displayHomePage);
 
-/* GET About page. */
-router.get('/about', function(req, res, next) {
-  res.render('about', { title: 'About' });
-});
+/* GET home page. */
+router.get('/home', indexController.displayHomePage);
 
-/* GET Projects page. */
-router.get('/projects', function(req, res, next) {
-  res.render('projects', { title: 'Projects' });
-});
+/* GET about page. */
+router.get('/about',  indexController.displayAboutPage);
 
-/* GET Services page. */
-router.get('/services', function(req, res, next) {
-  res.render('services', { title: 'Services' });
-});
+/* GET products page. */
+router.get('/projects',  indexController.displayProjectsPage);
 
-/* GET Contact page. */
-router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Contact Us' });
-});
+/* GET services page. */
+router.get('/services',  indexController.displayServicesPage);
+
+/* GET contact page. */
+router.get('/contact',  indexController.displayContactPage);
 
 module.exports = router;
+
