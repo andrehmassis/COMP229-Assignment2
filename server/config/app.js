@@ -16,7 +16,7 @@ let session = require('express-session')
 let passport = require('passport')
 let passportLocal = require('passport-local')
 let localStrategy = passportLocal.Strategy;
-let flash = require('connect-flash') 
+let flash = require('connect-flash');
 
 // database setup
 let mongoose = require('mongoose');
@@ -25,6 +25,7 @@ let DB = require('./db');
 let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
 let contactRouter = require('../routes/contactlist');
+const { Session } = require('inspector');
 
 
 // point mongoose to the DB URI
@@ -62,12 +63,12 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
-//passport user configuration
-//create a User Model Instance
+// passport user configuration
+// create a User Model Instance
 let userModel = require('../models/user');
 let User = userModel.User;
 
-// Implementation User Authentication Strategy
+// implemente User Authentication Strategy
 passport.use(User.createStrategy());
 
 passport.serializeUser(User.serializeUser());
@@ -90,7 +91,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error', { title: 'Error'});
 });
 
 module.exports = app;

@@ -33,14 +33,15 @@ module.exports.displayAddPage = async (req, res, next) =>{
     } catch (err) {
         console.error(err);
     }
-}
+};
+
 module.exports.processAddPage = async (req, res, next) =>{
     let newContactList = new ContactList({
         "name": req.body.name,
         "username": req.body.username,
         "password": req.body.password,
         "email": req.body.email
-    })
+    });
 
     try {
         await newContactList.save();
@@ -49,7 +50,8 @@ module.exports.processAddPage = async (req, res, next) =>{
         console.log(err);
         res.status(500).send(err);
     }
-}
+};
+
 module.exports.displayEditPage = async (req, res, next) =>{
     let id = req.params.id;
 
@@ -63,7 +65,8 @@ module.exports.displayEditPage = async (req, res, next) =>{
         console.log(err);
         res.status(500).send(err);
     }
-}
+};
+
 module.exports.processEditPage = async (req, res, next) =>{
     let id = req.params.id;
     let updatedContactList = {
@@ -79,7 +82,8 @@ module.exports.processEditPage = async (req, res, next) =>{
         console.log(err);
         res.status(500).send(err);
     }
-}
+};
+
 module.exports.performDelete = async (req, res, next) =>{
     let id = req.params.id;
 
@@ -90,4 +94,4 @@ module.exports.performDelete = async (req, res, next) =>{
         console.log(err);
         res.status(500).send(err);
     }
-}
+};
