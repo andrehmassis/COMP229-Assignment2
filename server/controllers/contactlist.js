@@ -28,7 +28,7 @@ module.exports.displayContactList = async (req, res, next) =>{
 module.exports.displayAddPage = async (req, res, next) =>{
     try {
         res.render('businessContact/add', {
-            title: 'Add Games',
+            title: 'Add Contact',
             displayName: req.user ? req.user.displayName : ''});
     } catch (err) {
         console.error(err);
