@@ -11,7 +11,7 @@ Date: 2023-06-17
 <%- include ('../partials/main_nav.ejs') %>
 
 <main class="container">
-    <!-- Message Area-->
+    <!-- Message Area -->
     <% if(messages.length > 0) { %>
         <div class="alert alert-danger">
             <%= messages %>
@@ -24,22 +24,30 @@ Date: 2023-06-17
             <form method="POST" autocomplete="off">
                 <fieldset class="form-group">
                     <label for="username">Username: </label>
-                    <input type="text" class="form-control" name="username" placeholder="Enter Username" id="username" required autofocus>
+                    <input type="text" class="form-control"
+                    name="username" placeholder="Enter Username"
+                    id="username" required autofocus>
                 </fieldset>
 
                 <fieldset class="form-group">
                     <label for="password">Password: </label>
-                    <input type="password" class="form-control" name="password" placeholder="Enter Password" id="password" required>
+                    <input type="password" class="form-control"
+                    name="password" placeholder="Enter Password"
+                    id="password" required>
                 </fieldset>
 
                 <fieldset class="form-group">
                     <label for="email">Email: </label>
-                    <input type="email" class="form-control" name="email" placeholder="Enter Email Address" id="email" required>
+                    <input type="email" class="form-control"
+                    name="email" placeholder="Enter Email Address"
+                    id="email" required>
                 </fieldset>
 
                 <fieldset class="form-group">
                     <label for="displayName">Display Name: </label>
-                    <input type="text" class="form-control" name="displayName" placeholder="Enter Display Name" id="displayName" required>
+                    <input type="text" class="form-control"
+                    name="displayName" placeholder="Enter Display Name"
+                    id="displayName" required>
                 </fieldset>
 
                 <fieldset class="form-group text-right">
@@ -48,13 +56,9 @@ Date: 2023-06-17
                         <input type="button" class="btn btn-warning" value="Cancel">
                     </a>
                 </fieldset>
-
             </form>
         </div>
-
     </div>
-
-
 </main>
 
 

@@ -5,7 +5,6 @@ File: users.js
 Date: 2023-06-17
 */
 
-
 var express = require('express');
 var router = express.Router();
 
