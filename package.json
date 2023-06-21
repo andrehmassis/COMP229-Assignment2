@@ -31,7 +31,7 @@
     "popper.js": "^1.16.1"
   },
   "description": "Assignment2",
-  "main": "index.js",
+  "main": "server.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/andrehmassis/COMP229-assignment2.git"
