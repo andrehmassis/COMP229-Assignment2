@@ -15,7 +15,6 @@ let ContactList = require('../models/contactlist');
 module.exports.displayContactList = async (req, res, next) =>{
     try{
         let contactList = await ContactList.find();
-        console.log(contactList)
         
         res.render('businessContact/contactlist', {
             title: 'Business Contact List', 
